@@ -19,10 +19,17 @@
 // }
 
 // // Task 5
-var Edit = document.getElementsByClassName("task")
-Edit[0].style.fontWeight = "bold";
+// var Edit = document.getElementsByClassName("task")
+// Edit[0].style.fontWeight = "bold";
 
-var Edit2 = document.getElementsByTagName("li");
-console.log(Edit2)
-Edit2[4].style.backgroundColor = "grey";
+// var Edit2 = document.getElementsByTagName("li");
+// console.log(Edit2)
+// Edit2[4].style.backgroundColor = "grey";
+
+// Task 6
+var listitem = document.querySelector('.list-group-item:nth-child(2)');
+listitem.style.backgroundColor = "green";
+
+var listitem2 = document.querySelector('.list-group-item:nth-child(3)');
+listitem2.style.display = "none";
 
