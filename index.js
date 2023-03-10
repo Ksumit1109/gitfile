@@ -27,9 +27,36 @@
 // Edit2[4].style.backgroundColor = "grey";
 
 // Task 6
-var listitem = document.querySelector('.list-group-item:nth-child(2)');
-listitem.style.backgroundColor = "green";
+// var listitem = document.querySelector('.list-group-item:nth-child(2)');
+// listitem.style.backgroundColor = "green";
 
-var listitem2 = document.querySelector('.list-group-item:nth-child(3)');
-listitem2.style.display = "none";
+// var listitem2 = document.querySelector('.list-group-item:nth-child(3)');
+// listitem2.style.display = "none";
+
+// Task 7
+
+var NewDiv = document.createElement('div');
+NewDiv.className= 'NewClass';
+NewDiv.id = 'NewId';
+NewDiv.setAttribute('title', 'Hii Div')
+
+
+var textNode = document.createTextNode('HEllo word');
+
+NewDiv.appendChild(textNode);
+var headercontainer = document.querySelector('header .container');
+var headerH1 = document.querySelector('header h1');
+
+headercontainer.insertBefore(NewDiv,headerH1);
+
+// Question 2 
+var NewDiv2 = document.createElement('li');
+var textNode2 = document.createTextNode('HEllo word');
+NewDiv2.appendChild(textNode2);
+var Items = document.getElementById('items');
+NewDiv2.className= "list-group-item";
+NewDiv2.appendChild(textNode2);
+Items.insertBefore(NewDiv2 , Items.childNodes[0])
+
+console.log(NewDiv);
 
