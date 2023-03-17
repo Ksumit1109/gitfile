@@ -100,6 +100,19 @@ function additem(e) {
   Editbtn.className = 'btn btn-info btn-sm float-right edit mr-2';
   Editbtn.appendChild(document.createTextNode('Edit'));
   li.appendChild(Editbtn);
+
+
+  
+var localStorage01={
+  item : NewItem,
+  description: newItem2
+}
+localStorage.setItem('itemDetails1',localStorage01.item +' '+ localStorage01.description)
+localStorage.setItem('itemDetails2',localStorage01.description)
+console.log(localStorage.getItem('itemDetails1'));
+
+// console.log(first , second);
+
 }
 
 function filterItems(e){
@@ -134,3 +147,6 @@ SelectForm.appendChild(Input);
 const existingInput = SelectForm.querySelector('#item');
 // insert the new input element before the existing input element
 SelectForm.insertBefore(Input, existingInput.nextSibling);
+
+
+// task 10
