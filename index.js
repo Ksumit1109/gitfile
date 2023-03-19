@@ -148,6 +148,7 @@ function removeitem(e) {
     if (confirm('Are You Sure?')) {
       var li = e.target.parentElement;
       SelectItem.removeChild(li);
+      localStorage.removeItem('UserDetails')
     }
   }
 }
