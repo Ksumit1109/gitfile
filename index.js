@@ -104,29 +104,29 @@ function additem(e) {
 
 
 // // Task 10
-// localStorage.setItem('itemDetails1',NewItem + ' '+ newItem2)
-// // localStorage.setItem('itemDetails2',newItem2)
-// console.log(localStorage.getItem('itemDetails1'));
-// // console.log(localStorage.getItem('itemDetails2'));
+localStorage.setItem('itemDetails1',NewItem + ' '+ newItem2)
+localStorage.setItem('itemDetails2',newItem2)
+console.log(localStorage.getItem('itemDetails1'));
+console.log(localStorage.getItem('itemDetails2'));
 
-// // console.log(first , second);
+//console.log(first , second);
 
 
 // Task 11  
-var localStorage01={
-  item : NewItem,
-  item2: newItem2
-}
+// var localStorage01={
+//   item : NewItem,
+//   item2: newItem2
+// }
 
-var ConvertToString = JSON.stringify(localStorage01);
-// console.log(ConvertToString);
+// var ConvertToString = JSON.stringify(localStorage01);
+// // console.log(ConvertToString);
 
-localStorage.setItem('UserDetails', ConvertToString);
-// console.log(localStorage);
+// localStorage.setItem('UserDetails', ConvertToString);
+// // console.log(localStorage);
 
-var StoreItem=localStorage.getItem('UserDetails');
-var converttoOBJ=JSON.parse(StoreItem);
-console.log(converttoOBJ.item +' '+ converttoOBJ.item2 );
+// var StoreItem=localStorage.getItem('UserDetails');
+// var converttoOBJ=JSON.parse(StoreItem);
+// console.log(converttoOBJ.item +' '+ converttoOBJ.item2 );
 }
 
 function filterItems(e){
