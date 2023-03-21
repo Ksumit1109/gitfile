@@ -1,8 +1,7 @@
 var selectform = document.getElementById('form');
 var list22 = document.getElementById('items1')
 var selectInput = document.querySelectorAll('.Input');
-selectform.addEventListener('submit' , items)
-list22.addEventListener('click' , DeleteLi)
+selectform.addEventListener('submit' , items);
 
 function items(e){
     e.preventDefault();
@@ -14,30 +13,47 @@ function items(e){
     li.appendChild(document.createTextNode(Name +'- '+ Email +'- '+ Contact))
     list22.appendChild(li);
 
-    // DELETE THE LI TAG
+    // CREATE DELETE BUTTON
     var delBtn = document.createElement('button')
     delBtn.className = "Del";
-    delBtn.appendChild(document.createTextNode('Remove'))
+    delBtn.appendChild(document.createTextNode('Delete'))
     li.appendChild(delBtn);
-var storage = {
-    Name,
-    Email,
-    Contact
-}
+    delBtn.onclick = () =>{
+        localStorage.removeItem(storage.Email)
+        list22.removeChild(li);
+    }
+    li.appendChild(delBtn);
+    list22.appendChild(li)
+
+    // CREATE EDIT BUTTON
+    var editBtn = document.createElement('button');
+    editBtn.className = 'edit';
+    editBtn.appendChild(document.createTextNode('Edit'))
+    editBtn.style.margin = '4px'
+    li.appendChild(editBtn);
+
+    editBtn.onclick= () =>{
+        localStorage.removeItem(storage.Email);
+        document.getElementById('name').value = storage.Name;
+        document.getElementById('email').value = storage.Email;
+        document.getElementById('contact').value = storage.Contact;
+        list22.removeChild(li);
+    }
+    list22.appendChild(li);
+
+    
+    var storage={
+        Name,
+        Email,
+        Contact
+    }
+    
 
 var convertostring = JSON.stringify(storage);
-localStorage.setItem("Name", convertostring)
-var storeitems = localStorage.getItem("Name");
+localStorage.setItem( storage.Email,convertostring)
+var storeitems = localStorage.getItem(storage.Email);
 var converttoOBJ=JSON.parse(storeitems);
 console.log(converttoOBJ.Name +'-'+ converttoOBJ.Email +'-'+ converttoOBJ.Contact);
 }
 
-function DeleteLi(e){
-    if(e.target.classList.contains('Del')){
-        if(confirm('Are you sure?')){
-            var li = e.target.parentElement;
-            list22.removeChild(li);
-            localStorage.removeItem("Name");
-        }
-    }
-}
+
