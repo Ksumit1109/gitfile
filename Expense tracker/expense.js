@@ -53,3 +53,7 @@ let StoreItem = localStorage.getItem(Storage.description)
 let ConvertToObj = JSON.parse(StoreItem)
 console.log(ConvertToObj.expenseamt +'-'+ConvertToObj.description+'-'+ConvertToObj.Category);
 }
+
+// /exp
+
+// /exp
