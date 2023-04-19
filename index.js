@@ -105,9 +105,9 @@ function additem(e) {
 
 // // Task 10
 localStorage.setItem('itemDetails1',NewItem + ' '+ newItem2)
-localStorage.setItem('itemDetails2',newItem2)
+// localStorage.setItem('itemDetails2',newItem2)
 console.log(localStorage.getItem('itemDetails1'));
-console.log(localStorage.getItem('itemDetails2'));
+// console.log(localStorage.getItem('itemDetails2'));
 
 //console.log(first , second);
 
