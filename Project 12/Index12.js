@@ -47,18 +47,10 @@ function items(e){
         Email,
         Contact
     }
-    axios.post("https://crudcrud.com/api/be38ae20bfb0481987856373be2040a8/userdata",storage)
-    .then((response)=>{
-        console.log(response);
-    })
-    .catch((err)=>{
-        console.log(err)
-    })
     
 
-// var convertostring = JSON.stringify(storage);
-
-// localStorage.setItem( storage.Email,convertostring)
+var convertostring = JSON.stringify(storage);
+localStorage.setItem( storage.Email,convertostring)
 var storeitems = localStorage.getItem(storage.Email);
 var converttoOBJ=JSON.parse(storeitems);
 console.log(converttoOBJ.Name +'-'+ converttoOBJ.Email +'-'+ converttoOBJ.Contact);
