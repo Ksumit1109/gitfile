@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making waiter's life easy with crud crud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 233);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .Logo{
+            height: 4rem;
+        }
+
+        .navbar-brand{
+        display: flex;
+        padding-left: 1rem;
+        background-color: white;
+        }
+
+        .multicolortext {
+        background-image: linear-gradient(to left, rgb(82, 9, 4), rgb(123, 16, 10), rgb(157, 52, 11), rgb(210, 21, 21), rgb(215, 47, 47), rgb(255, 31, 1), rgb(229, 178, 178));
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+    </style>
+</head>
+<body>  
+    <nav class="navbar-brand">
+        <h1 class="multicolortext">
+            <img class="Logo" src="/Logo.png" alt="" srcset="">
+             SHARPENER RESTRO
+        </h1>
+    </nav>
+    <div class="container">
+        <form id="form" class="m-2">      
+            <label for="Choose price">Choose Price</label>
+            <input type="number" id="ChoosePrice" placeholder="Enter Price" "Input" required>
+            <label for="Choose Dish">Choose Dish</label>
+            <input type="text" id="ChooseDish" placeholder="Enter dish" class="Input" required>
+            <label for="Choose a Table">Choose a Table</label>
+            <select id="ChooseTable">
+                <option value="Table 1">Table 1</option>
+                <option value="Table 2">Table 2</option>
+                <option value="Table 3">Table 3</option>
+            </select>
+            <input class="btn btn-success" type="submit" value="Add to bill" id="add" >
+        </form>
+        <div class="card-body mt-5 Items-category">
+            <h1 class="mb-3 Orders">ORDERS</h1>
+            <h3 class="mb-3 Tables Table1">Table 1</h3>
+            <h3 class="mb-3 Tables Table2">Table 2</h3>
+            <h3 class="mb-3 Tables Table3">Table 3</h3>
+        </div>
+    </div>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>
